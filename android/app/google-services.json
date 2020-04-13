@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "338936093150",
+    "firebase_url": "https://home-equity-calculator.firebaseio.com",
+    "project_id": "home-equity-calculator",
+    "storage_bucket": "home-equity-calculator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338936093150:android:fa2c68dcbc09d83d82a54f",
+        "android_client_info": {
+          "package_name": "com.gurpreetsingh.homeequitycalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338936093150-ktiqdifi0u7ck6nsjqqjirgi4pu17fnt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4QrA4slzZFRv0hOzUvSVtT31ylPFKcX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338936093150-ktiqdifi0u7ck6nsjqqjirgi4pu17fnt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

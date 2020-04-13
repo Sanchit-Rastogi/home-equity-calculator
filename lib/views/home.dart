@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
+import 'apply.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -7,7 +8,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  GlobalKey _form = GlobalKey();
+  final _formKey = GlobalKey<FormState>();
   GlobalKey<FlipCardState> cardKey = GlobalKey<FlipCardState>();
   static TextEditingController _marketValue = TextEditingController();
   static TextEditingController _mortgageBalance = TextEditingController();
@@ -109,7 +110,7 @@ class _HomeState extends State<Home> {
                       horizontal: 20,
                     ),
                     child: Form(
-                      key: _form,
+                      key: _formKey,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
@@ -133,6 +134,12 @@ class _HomeState extends State<Home> {
                               fillColor: Colors.white,
                             ),
                             keyboardType: TextInputType.number,
+                            validator: (value) {
+                              if (value.isEmpty) {
+                                return 'Please enter market value';
+                              }
+                              return null;
+                            },
                           ),
                           SizedBox(
                             height: 20,
@@ -145,6 +152,12 @@ class _HomeState extends State<Home> {
                               fillColor: Colors.white,
                             ),
                             keyboardType: TextInputType.number,
+                            validator: (value) {
+                              if (value.isEmpty) {
+                                return 'Please enter mortgage balance';
+                              }
+                              return null;
+                            },
                           ),
                           SizedBox(
                             height: 20,
@@ -157,6 +170,12 @@ class _HomeState extends State<Home> {
                               fillColor: Colors.white,
                             ),
                             keyboardType: TextInputType.number,
+                            validator: (value) {
+                              if (value.isEmpty) {
+                                return 'Please enter tax balance';
+                              }
+                              return null;
+                            },
                           ),
                           SizedBox(
                             height: 20,
@@ -169,6 +188,12 @@ class _HomeState extends State<Home> {
                               fillColor: Colors.white,
                             ),
                             keyboardType: TextInputType.text,
+                            validator: (value) {
+                              if (value.isEmpty) {
+                                return 'Please enter city';
+                              }
+                              return null;
+                            },
                           ),
                           SizedBox(
                             height: 20,
@@ -180,9 +205,11 @@ class _HomeState extends State<Home> {
                               elevation: 10,
                               color: Colors.yellow,
                               onPressed: () {
-                                calculate();
-                                FocusScope.of(context).unfocus();
-                                cardKey.currentState.toggleCard();
+                                if (_formKey.currentState.validate()) {
+                                  calculate();
+                                  FocusScope.of(context).unfocus();
+                                  cardKey.currentState.toggleCard();
+                                }
                               },
                               child: Text(
                                 'CALCULATE',
@@ -284,7 +311,15 @@ class _HomeState extends State<Home> {
                             RaisedButton(
                               color: Colors.yellow,
                               elevation: 10,
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Apply(
+                                            takeoutValue: takeout,
+                                          )),
+                                );
+                              },
                               child: Text(
                                 "APPLY NOW",
                                 style: TextStyle(

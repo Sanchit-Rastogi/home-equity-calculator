@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>338936093150-ah5hetspuhoroq2aapcfm7addq8akdbt.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.338936093150-ah5hetspuhoroq2aapcfm7addq8akdbt</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDAhSsv0Xzjj8vLGnbB-1bPnLubl1mKTq4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>338936093150</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gurpreetsingh.homeequitycalculator</string>
+	<key>PROJECT_ID</key>
+	<string>home-equity-calculator</string>
+	<key>STORAGE_BUCKET</key>
+	<string>home-equity-calculator.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:338936093150:ios:d58530d7eb0e7f7982a54f</string>
+	<key>DATABASE_URL</key>
+	<string>https://home-equity-calculator.firebaseio.com</string>
+</dict>
+</plist>
