@@ -57,6 +57,8 @@ class _HomeState extends State<Home> {
             ListTile(
               leading: Icon(Icons.contact_mail),
               title: Text('Contact Us'),
+              enabled: true,
+              onTap: () => Navigator.pushNamed(context, 'contact'),
             ),
           ],
         ),
@@ -317,6 +319,13 @@ class _HomeState extends State<Home> {
                                   MaterialPageRoute(
                                       builder: (context) => Apply(
                                             takeoutValue: takeout,
+                                            marketValue:
+                                                _marketValue.value.text,
+                                            mortgageBalance:
+                                                _mortgageBalance.value.text,
+                                            propertyCity: _city.value.text,
+                                            propertyTax:
+                                                _propertyTax.value.text,
                                           )),
                                 );
                               },
