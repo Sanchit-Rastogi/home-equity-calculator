@@ -33,7 +33,7 @@ class Works extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 30,
-                              fontWeight: FontWeight.w900,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ),
@@ -44,8 +44,9 @@ class Works extends StatelessWidget {
                           "1. Use the Home Equity Calculator to estimate how much equity you can access",
                           style: TextStyle(
                             fontSize: 20,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w400,
                           ),
+                          textAlign: TextAlign.justify,
                         ),
                         SizedBox(
                           height: 20,
@@ -54,8 +55,9 @@ class Works extends StatelessWidget {
                           "2. Contact our office to discuss your financial profile and challenges",
                           style: TextStyle(
                             fontSize: 20,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w400,
                           ),
+                          textAlign: TextAlign.justify,
                         ),
                         SizedBox(
                           height: 20,
@@ -64,8 +66,9 @@ class Works extends StatelessWidget {
                           "3. We will discuss available financial options that may work for you",
                           style: TextStyle(
                             fontSize: 20,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w400,
                           ),
+                          textAlign: TextAlign.justify,
                         ),
                         SizedBox(
                           height: 20,
@@ -74,8 +77,9 @@ class Works extends StatelessWidget {
                           "4. We work with you to restructure your mortgage",
                           style: TextStyle(
                             fontSize: 20,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w400,
                           ),
+                          textAlign: TextAlign.justify,
                         ),
                         SizedBox(
                           height: 20,
@@ -84,8 +88,9 @@ class Works extends StatelessWidget {
                           "5. We review the new structure periodically to make sure it’s working for you",
                           style: TextStyle(
                             fontSize: 20,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w400,
                           ),
+                          textAlign: TextAlign.justify,
                         ),
                       ],
                     ),

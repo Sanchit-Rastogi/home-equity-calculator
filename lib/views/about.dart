@@ -45,6 +45,7 @@ class About extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 18,
                           ),
+                          textAlign: TextAlign.justify,
                         ),
                         SizedBox(
                           height: 20,
@@ -54,6 +55,7 @@ class About extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 18,
                           ),
+                          textAlign: TextAlign.justify,
                         ),
                       ],
                     ),

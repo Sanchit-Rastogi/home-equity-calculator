@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:maps_launcher/maps_launcher.dart';
+import 'package:email_validator/email_validator.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Contact extends StatefulWidget {
   @override
@@ -39,6 +41,15 @@ class _ContactState extends State<Contact> {
     });
   }
 
+  _launchCaller() async {
+    const url = "tel:+1 (647)-546-0333";
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,6 +83,12 @@ class _ContactState extends State<Contact> {
                                 filled: true,
                                 fillColor: Colors.white,
                               ),
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return 'Please enter your name';
+                                }
+                                return null;
+                              },
                             ),
                             SizedBox(
                               height: 20,
@@ -83,6 +100,16 @@ class _ContactState extends State<Contact> {
                                 filled: true,
                                 fillColor: Colors.white,
                               ),
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return 'Please enter email';
+                                } else if (EmailValidator.validate(
+                                        _email.value.text) ==
+                                    false) {
+                                  return 'Please enter a vallid email address';
+                                }
+                                return null;
+                              },
                             ),
                             SizedBox(
                               height: 20,
@@ -96,6 +123,12 @@ class _ContactState extends State<Contact> {
                                 filled: true,
                                 fillColor: Colors.white,
                               ),
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return 'Please enter some text';
+                                }
+                                return null;
+                              },
                             ),
                             SizedBox(
                               height: 20,
@@ -184,11 +217,17 @@ class _ContactState extends State<Contact> {
                         SizedBox(
                           height: 20,
                         ),
-                        Text(
-                          "Call/Whatsapp +1 (647)-546-0333",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
+                        GestureDetector(
+                          onTap: () {
+                            print("tapped");
+                            _launchCaller();
+                          },
+                          child: Text(
+                            "Call/Whatsapp +1 (647)-546-0333",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 18,
+                            ),
                           ),
                         ),
                         SizedBox(
